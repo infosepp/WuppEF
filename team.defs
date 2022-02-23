@@ -1,0 +1,17 @@
+#Wed Feb 23 16:30:43 CET 2022
+bluej.teamsettings.ignore1=.*\\.class
+bluej.teamsettings.yourName=Henning Ain\u00F6dhofer
+bluej.teamsettings.git.server=github.com
+bluej.teamsettings.yourEmail=henning.ainoedhofer@mga.bistum365.de
+bluej.teamsettings.git.repositoryPrefix=/infosepp/WuppEF.git
+bluej.teamsettings.vcs=git
+bluej.teamsettings.user=infosepp
+bluej.teamsettings.ignore3=team\\.defs
+bluej.teamsettings.ignore2=bluej\\.pkh
+bluej.teamsettings.ignore5=.*\\~
+bluej.teamsettings.git.branch=
+bluej.teamsettings.ignore4=.*\\.ctxt
+bluej.teamsettings.ignore7=.*\\\#backup
+bluej.teamsettings.ignore6=.*\\\#
+bluej.teamsettings.git.protocol=https
+bluej.teamsettings.ignore8=\\.DS_Store

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Wuerfel
+comment0.text=\r\n\r\n
+comment1.params=
+comment1.target=Wuerfel()
+comment1.text=Konstruktor
+comment2.params=
+comment2.target=int\ gibAktWert()
+comment2.text=\ \r\n\ Diese\ Methode\ liefert\ den\ aktuellen\ Wert\ von\ aktWert\r\n\ @return\ liefert\ aktWert\ \r\n
+comment3.params=
+comment3.target=void\ wuerfeln()
+comment3.text=\ \ \r\n\ Diese\ Methode\ wuerfelt\ eine\ neue\ Zahl\ zwischen\ 1\ und\ 6\ und\ wei\u00DFt\ sie\ dem\ aktWert\ zu.\r\n
+comment4.params=
+comment4.target=int\ erzeugeZufallszahl()
+comment4.text=\r\n\ Diese\ Methode\ gibt\ eine\ Zufallszahl\ zwischen\ 1\ und\ 6\ zur\u00FCck\r\n
+comment5.params=wert
+comment5.target=void\ setzeAktWert(int)
+comment5.text=\r\n\ Diese\ Methode\ setzt\ den\ aktWert\ auf\ den\ Parameterwert\ aus\ wert\r\n
+numComments=6

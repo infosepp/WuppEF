@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Person
+comment0.text=\r\n\r\n
+comment1.params=
+comment1.target=Person()
+comment1.text=Konstruktor
+comment2.params=pAktErgebnis
+comment2.target=void\ setzeAktErgebnis(int)
+comment2.text=\ \r\n\ Diese\ Methode\ setzt\ den\ Attributwert\ von\ aktErgebnis\ \r\n\ \ auf\ den\ Wert\ aus\ pAktErgebnis\r\n
+comment3.params=
+comment3.target=void\ spielen()
+comment3.text=\r\n\ Diese\ Methode\ setzt\ die\ Spiellogik\ im\ Spielerobjekt\ um\r\n
+comment4.params=zahl1\ zahl2
+comment4.target=int\ addiere(int,\ int)
+comment4.text=\r\n\ Diese\ Methode\ addiert\ zwei\ Zahlen\ mit\ einander\ und\ gibt\ das\ \r\n\ Ergebnis\ zur\u00FCck\r\n
+comment5.params=
+comment5.target=int\ gibAktErgebnis()
+comment5.text=\r\n\ Diese\ Methode\ gib\ den\ aktuellen\ Attributwert\ von\ aktErgebnis\ aus\ \r\n\ @return\ liefert\ aktErgebnis\ \r\n
+comment6.params=
+comment6.target=void\ warte()
+comment6.text=\r\n\ Diese\ Methode\ h\u00E4lt\ den\ Prozessor\ f\u00FCr\ 1\ Sekunde\ lang\ an,\ bevor\ der\ Prozessor\ weiter\ rechnet.\r\n
+numComments=7

@@ -1,0 +1,189 @@
+/**
+ *
+ */
+public class Spiel 
+{
+    /* Attribute */
+    private Person aktuellerSpieler;
+    private Croupier croupier;
+    private int punkteSpieler;
+    private Spieler spieler;
+    private int punkteCroupier;
+
+    /*Konstruktor*/
+    public Spiel()
+    {
+        croupier = new Croupier();
+        spieler = new Spieler();
+        punkteCroupier = 0;
+        punkteSpieler = 0;
+    }
+
+    /* Methoden */
+    /** 
+     * Diese Methode setzt den Attributwert von punkteCroupier 
+     * auf den Wert aus pPunkteCroupier
+     * @param pPunkteCroupier
+     */
+    public void setzePunkteCroupier(int  pPunkteCroupier)
+    {
+        this.punkteCroupier = pPunkteCroupier;
+    }
+
+    /**
+     * Diese Methode liefert den aktuellen Spieler als Objekt 
+     * @return liefert aktuellerSpieler 
+     */
+    public Person gibAktuellerSpieler()
+    {
+        return this.aktuellerSpieler;
+    }
+
+    /** 
+     * Diese Methode setzt das Attribut aktuellerSpieler auf den 
+     * übergebenen Wert aus pAktuellerSpieler
+     * @param pAktuellerSpieler
+     */
+    public void setzeAktuellerSpieler(Person  pAktuellerSpieler)
+    {
+        this.aktuellerSpieler = pAktuellerSpieler;
+    }
+
+    /**
+     * Diese Methode druckt den aktuellen Punktestand auf der Konsole
+     */
+    public void druckePunktestand()
+    {
+        System.out.println("-----------------Punktestand-----------------");
+        System.out.println("Spieler \t "+this.gibPunkteSpieler()+" : "+this.gibPunkteCroupier()+" \t\t Croupier");
+        System.out.println("---------------------------------------------");
+    }
+
+    /**
+     * Diese Methode wechselt den aktuellen Spieler auf der 
+     * Grundlage der Belegung des Attributes aktuellerSpieler
+     */
+    public void spielerWechseln()
+    {
+        if(aktuellerSpieler.equals(croupier))
+        {
+            aktuellerSpieler = spieler;
+        }
+        else
+        {
+            aktuellerSpieler = croupier;
+        }
+    }
+
+    /**
+     * Diese Methode gibt den Gesamtsieger als Objekt zurück
+     * @return Person die gewonnen hat
+     */
+    public Person ermittleGesamtsieger()
+    {
+        if(this.gibPunkteSpieler() >= 3)
+        {
+            return spieler;
+        }
+        else if(this.gibPunkteCroupier() >= 3)
+        {
+            return croupier;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    /**
+     * Diese Methode gibt den Rundensieger als Objekt zurück
+     * @return Person die die Runde gewonnen hat
+     */
+    public Person ermittleRundensieger()
+    {
+        
+        if(spieler.gibAktErgebnis() > croupier.gibAktErgebnis() && spieler.gibAktErgebnis() <= 21) 
+        {
+            return spieler;
+        }
+        else
+        {
+            return croupier;
+        }
+    }
+
+    /**
+     * Diese Methode startet ein neues Spiel. In dieser Methode ist die 
+     * Spiellogik implementiert.
+     */
+
+    public void starteSpiel()
+    {
+        //Diese Methode muss noch implementiert werden!
+    }
+
+    /**
+     * Diese Methode startet eine Runde innerhalb eines Spiels
+     */
+    public void starteRunde()
+    {
+        this.gibAktuellerSpieler().spielen();
+        this.spielerWechseln();
+        this.gibAktuellerSpieler().spielen();
+        if(this.ermittleRundensieger() == spieler)
+        {
+            this.setzePunkteSpieler(this.gibPunkteSpieler()+1);
+        }
+        else
+        {
+            this.setzePunkteCroupier(this.gibPunkteCroupier()+1);
+        }
+    }
+
+    /**
+     * Diese Methode beendet das Spiel und gibt auf der
+     * Konsole ein Grußwort aus!
+     */
+
+    public void spielBeenden()
+    {
+        if(this.ermittleGesamtsieger() == spieler)
+        {
+            System.out.println("Herzlichen Glückwunsch! Sie haben das Spiel mit "+this.gibPunkteSpieler()+" : "+this.gibPunkteCroupier()+" gewonnen!");
+        }
+        else
+        {
+            System.out.println("Sie haben das Spiel leider mit "+this.gibPunkteSpieler()+" : "+this.gibPunkteCroupier()+" verloren!");
+        }
+    }
+
+    /** 
+     * Diese Methode liefert die Punkte des Spielers
+     *@return liefert punkteSpieler 
+     */
+    public int gibPunkteSpieler()
+    {
+        return this.punkteSpieler;
+    }
+
+    /** 
+     * Diese Methode setzt den Wert von punkteSpieler auf den
+     * übergebenen Wert von pPunkteSpieler
+     * @param pPunkteSpieler
+     */
+    public void setzePunkteSpieler(int  pPunkteSpieler)
+    {
+        this.punkteSpieler = pPunkteSpieler;
+    }
+
+    /**
+     * Diese Methode gibt den Wert aus punkteCroupier aus 
+     * @return liefert punkteCroupier 
+     */
+    public int gibPunkteCroupier()
+    {
+        return this.punkteCroupier;
+    }
+
+}//Ende Klasse: Spiel
+

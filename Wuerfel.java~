@@ -1,0 +1,48 @@
+import java.util.Random;
+/**
+ *
+ */
+public class Wuerfel 
+{
+    /* Attribute */
+    private int aktWert;
+    /*Konstruktor*/
+    public Wuerfel()
+    {
+    }
+    /* Methoden */
+    /** 
+     * Diese Methode liefert den aktuellen Wert von aktWert
+     * @return liefert aktWert 
+     */
+    public int gibAktWert(){
+        return this.aktWert;
+    }
+
+    /**  
+     * Diese Methode wuerfelt eine neue Zahl zwischen 1 und 6 und weißt sie dem aktWert zu.
+     */
+    public void wuerfeln()
+    {
+        this.setzeAktWert(erzeugeZufallszahl());
+    }
+
+    /**
+     * Diese Methode gibt eine Zufallszahl zwischen 1 und 6 zurüc
+     */
+    public int erzeugeZufallszahl()
+    {
+        Random r = new Random();
+        return r.nextInt(6)+1;
+    }
+
+    /**
+     * Diese Methode setzt den aktWert auf den Parameterwert aus wert
+     */
+    private void setzeAktWert(int  wert)
+    {
+        this.aktWert = wert;
+    }
+
+}//Ende Klasse: Wuerfel
+

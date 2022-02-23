@@ -1,0 +1,28 @@
+/**
+ *
+ */
+public class Croupier extends Person 
+{
+    /*Konstruktor*/
+    public Croupier()
+    {
+    }
+
+    /*Methoden*/
+    /**
+     * 
+     */
+    public void spielen()
+    {
+        this.setzeAktErgebnis(0);
+        while(this.gibAktErgebnis()< 18)
+        {
+            System.out.println("Der aktueller Würfelwert beträgt "+this.gibAktErgebnis()+", der Croupier spielt weiter...");
+            wuerfel.wuerfeln();
+            warte()
+            this.setzeAktErgebnis(this.gibAktErgebnis()+wuerfel.gibAktWert());
+        }
+        System.out.println("Der aktueller Würfelwert beträgt "+this.gibAktErgebnis()+", der Croupier hört auf!");
+    }
+}//Ende Klasse: Croupier
+
