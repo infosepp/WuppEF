@@ -16,7 +16,7 @@ public class Wuerfel
      * @return liefert aktWert 
      */
     public int gibAktWert(){
-        
+        return aktWert;
     }
 
     /**  
