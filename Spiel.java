@@ -118,8 +118,7 @@ public class Spiel
 
     public void spielBeenden()
     { 
-        System.out.println("Das Spiel wurde beendet, bis zum nächsten Mal!");
-        
+       System.out.println("Das Spiel wurde beendet, bis zum nächsten Mal!"); 
     }
 
     /** 
