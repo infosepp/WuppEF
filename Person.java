@@ -20,9 +20,11 @@ public abstract class Person
     /* Methoden */
     /** 
      * Diese Methode setzt den Attributwert von aktErgebnis 
-     *  auf den Wert aus pAktErgebnis
+     *  auf den Wert aus pAktErgebnis (Max)
      */
     public void setzeAktErgebnis(int  pAktErgebnis){
+        
+        this.aktErgebnis=pAktErgebnis;
         
     }
 
@@ -36,7 +38,9 @@ public abstract class Person
      * Ergebnis zurück
      */
     public int addiere(int  zahl1,int  zahl2){
-        
+        int ergebnis;
+        ergebnis = zahl1 + zahl2;
+        return ergebnis;
     }
 
     /**
@@ -44,7 +48,7 @@ public abstract class Person
      * @return liefert aktErgebnis 
      */
     public int gibAktErgebnis(){
-        
+
     }
 
     /**
