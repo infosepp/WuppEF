@@ -80,11 +80,27 @@ public class Spiel
      * @return Person die gewonnen hat
      */
     public Person ermittleGesamtsieger()
-        {return this.ermittleGesamtsieger();
-        
-            
-            
+        {
+            if (gibPunkteSpieler()== 3)
+            {
+                return spieler;
+            }
+        if (gibPunkteCroupier()== 3)
+        {
+            return croupier;
         }
+         if (gibPunkteCroupier()<3)
+         {
+             return null;
+             
+            }
+         if (gibPunkteCroupier()<3) 
+         {
+             return null;
+            }
+        }
+    
+    
 
     /**
      * Diese Methode gibt den Rundensieger als Objekt zurück
