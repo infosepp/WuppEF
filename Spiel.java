@@ -46,7 +46,7 @@ public class Spiel
      * @param pAktuellerSpieler
      */
     public void setzeAktuellerSpieler(Person  pAktuellerSpieler)
-    {
+    { 
         
     }
 
@@ -119,8 +119,8 @@ public class Spiel
      */
 
     public void spielBeenden()
-    {
-        
+    { 
+       System.out.println("Das Spiel wurde beendet, bis zum nächsten Mal!"); 
     }
 
     /** 
