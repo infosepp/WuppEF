@@ -91,7 +91,19 @@ public class Spiel
      */
 
     public void starteSpiel()
-    {
+    { 
+        while(ermittleGesamtsieger() == null)
+        {
+            starteRunde();
+            if(ermittleRundensieger().equals(spieler))
+            {
+                setzePunkteSpieler(gibPunkteSpieler()+1);
+            }
+            else
+            {
+                setzePunkteCroupier(gibPunkteCroupier()+1);
+            }
+        }
         
     }
 
