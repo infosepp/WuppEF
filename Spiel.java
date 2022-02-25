@@ -64,7 +64,15 @@ public class Spiel
      */
     public void spielerWechseln()
     {
- 
+        if(gibAktuellerSpieler().equals(croupier))
+        {
+           setzeAktuellerSpieler(spieler); 
+        }
+        else
+        {
+            setzeAktuellerSpieler(croupier);
+        }
+            
     }
 
     /**
