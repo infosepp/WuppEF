@@ -15,7 +15,17 @@ public class Spieler extends Person
      * @return entscheidung
      */
     public boolean entscheide(){
-        
+        Scanner s = new Scanner(System.in);
+        System.out.println("Möchtest du weiterspielen?");
+        String eingabe = s.next();
+        if(eingabe=="Ja")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
