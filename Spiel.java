@@ -82,8 +82,14 @@ public class Spiel
      */
     public Person ermittleRundensieger()
     {
-       
+       if(spieler.gibAktErgebnis() < 21 && croupier.gibAktErgebnis()>21 || spieler.gibAktErgebnis() > croupier.gibAktErgebnis())
+       { 
+           setzePunkteSpieler(gibPunkteSpieler()+1);
+       }else{
+           setzePunkteCroupier(gibPunkteCroupier()+1);
+       }
     }
+    
 
     /**
      * Diese Methode startet ein neues Spiel. In dieser Methode ist die 
