@@ -46,7 +46,7 @@ public abstract class Person
      * @return liefert aktErgebnis 
      */
     public int gibAktErgebnis(){
-        
+      return this.aktErgebnis();  
     }
 
     /**
