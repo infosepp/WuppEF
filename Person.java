@@ -38,7 +38,9 @@ public abstract class Person
      * Ergebnis zurück
      */
     public int addiere(int  zahl1,int  zahl2){
-        
+        int ergebnis;
+        ergebnis = zahl1 + zahl2;
+        return ergebnis;
     }
 
     /**
@@ -46,7 +48,7 @@ public abstract class Person
      * @return liefert aktErgebnis 
      */
     public int gibAktErgebnis(){
-      return this.aktErgebnis();  
+
     }
 
     /**
