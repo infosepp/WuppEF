@@ -76,7 +76,7 @@ public class Spiel
     }
 
     /**
-     * Diese Methode gibt den Gesamtsieger als Objekt zurück                  Eva
+     * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
      * @return Person die gewonnen hat
      */
     public Person ermittleGesamtsieger()
