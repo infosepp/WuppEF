@@ -24,7 +24,7 @@ public class Wuerfel
      */
     public void wuerfeln()
     {
-        
+      this.aktWert = erzeugeZufallszahl();
     }
 
     /**
