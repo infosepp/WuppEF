@@ -76,13 +76,15 @@ public class Spiel
     }
 
     /**
-     * Diese Methode gibt den Gesamtsieger als Objekt zurück
+     * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
      * @return Person die gewonnen hat
      */
     public Person ermittleGesamtsieger()
-    {
+        {return this.ermittleGesamtsieger();
         
-    }
+            
+            
+        }
 
     /**
      * Diese Methode gibt den Rundensieger als Objekt zurück
