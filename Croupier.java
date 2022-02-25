@@ -6,6 +6,7 @@ public class Croupier extends Person
     /*Konstruktor*/
     public Croupier()
     {
+        
     }
 
     /*Methoden*/
@@ -14,7 +15,12 @@ public class Croupier extends Person
      */
     public void spielen()
     {
-        
+        while(gibAktErgebnis()<17)
+        {
+           wuerfel.wuerfeln();
+           int erg = wuerfel.gibAktWert();
+           setzeAktErgebnis(addiere(erg, gibAktErgebnis()));
+        }
     }
 }//Ende Klasse: Croupier
 

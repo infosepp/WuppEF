@@ -37,7 +37,7 @@ public class Spiel
      */
     public Person gibAktuellerSpieler()
     {
-        
+        return aktuellerSpieler;
     }
 
     /** 
@@ -46,7 +46,7 @@ public class Spiel
      * @param pAktuellerSpieler
      */
     public void setzeAktuellerSpieler(Person  pAktuellerSpieler)
-    {
+    { 
         
     }
 
@@ -64,17 +64,27 @@ public class Spiel
      */
     public void spielerWechseln()
     {
- 
+        if(gibAktuellerSpieler().equals(croupier))
+        {
+           setzeAktuellerSpieler(spieler); 
+        }
+        else
+        {
+            setzeAktuellerSpieler(croupier);
+        }
+            
     }
 
     /**
-     * Diese Methode gibt den Gesamtsieger als Objekt zurück
+     * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
      * @return Person die gewonnen hat
      */
     public Person ermittleGesamtsieger()
-    {
+        {return this.ermittleGesamtsieger();
         
-    }
+            
+            
+        }
 
     /**
      * Diese Methode gibt den Rundensieger als Objekt zurück
@@ -115,8 +125,8 @@ public class Spiel
      */
 
     public void spielBeenden()
-    {
-        
+    { 
+       System.out.println("Das Spiel wurde beendet, bis zum nächsten Mal!"); 
     }
 
     /** 
