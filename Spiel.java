@@ -100,6 +100,7 @@ public class Spiel
        }
     }
     
+    
 
     /**
      * Diese Methode startet ein neues Spiel. In dieser Methode ist die 
