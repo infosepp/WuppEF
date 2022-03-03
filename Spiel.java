@@ -28,7 +28,7 @@ public class Spiel
      */
     public void setzePunkteCroupier(int  pPunkteCroupier)
     {
-
+        punkteCroupier = pPunkteCroupier;
     }
 
     /**
@@ -47,7 +47,7 @@ public class Spiel
      */
     public void setzeAktuellerSpieler(Person  pAktuellerSpieler)
     { 
-
+        aktuellerSpieler = pAktuellerSpieler;
     }
 
     /**
@@ -55,7 +55,7 @@ public class Spiel
      */
     public void druckePunktestand()
     {
-
+        System.out.println("Punkte Croupier: "+gibPunkteCroupier()+" - Punkte Spieler:" +gibPunkteSpieler());
     }
 
     /**
@@ -89,14 +89,7 @@ public class Spiel
         {
             return croupier;
         }
-        if (gibPunkteCroupier()<3)
-        {
-            return null;
-        }
-        if (gibPunkteCroupier()<3) 
-        {
-            return null;
-        }
+        return null;
     }
 
     /**
@@ -105,16 +98,12 @@ public class Spiel
      */
     public Person ermittleRundensieger()
     {
-<<<<<<< HEAD
        if(spieler.gibAktErgebnis() < 21 && croupier.gibAktErgebnis()>21 || spieler.gibAktErgebnis() > croupier.gibAktErgebnis())
        { 
-           setzePunkteSpieler(gibPunkteSpieler()+1);
+           return spieler;
        }else{
-           setzePunkteCroupier(gibPunkteCroupier()+1);
+           return croupier;
        }
-=======
-
->>>>>>> 7e703cf609903f23827ac3e917152d8890a6026b
     }
     
     
@@ -138,10 +127,7 @@ public class Spiel
                 setzePunkteCroupier(gibPunkteCroupier()+1);
             }
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7e703cf609903f23827ac3e917152d8890a6026b
+        spielBeenden();
     }
 
     /**
@@ -149,7 +135,9 @@ public class Spiel
      */
     public void starteRunde()
     {
-
+        spieler.spielen();
+        spielerWechseln();
+        croupier.spielen();
     }
 
     /**
@@ -160,6 +148,16 @@ public class Spiel
     public void spielBeenden()
     { 
         System.out.println("Das Spiel wurde beendet, bis zum nächsten Mal!"); 
+        if(ermittleGesamtsieger().equals(spieler))
+        {
+            druckePunktestand();
+            System.out.println("Herzlichen Glückwunsh an den Spieler!");
+        }
+        else
+        {
+            druckePunktestand();
+            System.out.println("Herzlichen Glückwunsh an die Bank!");
+        }
     }
 
     /** 

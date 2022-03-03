@@ -34,8 +34,18 @@ public class Spieler extends Person
      */
     public void spielen()
     {
-        
+        for(int i = 0; i < 3; i = i + 1)
+        {
+            wuerfel.wuerfeln();
+            int ergebnis = wuerfel.gibAktWert();
+            setzeAktErgebnis(addiere(ergebnis, gibAktErgebnis()));
+        }
+        while(entscheide() == true && gibAktErgebnis() < 21)
+        {
+            wuerfel.wuerfeln();
+            int ergebnis = wuerfel.gibAktWert();
+            setzeAktErgebnis(addiere(ergebnis, gibAktErgebnis()));
+        }
     }
-
 }//Ende Klasse: Spieler
 
