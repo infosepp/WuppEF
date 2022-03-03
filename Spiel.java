@@ -92,19 +92,13 @@ public class Spiel
         if (gibPunkteCroupier()<3)
         {
             return null;
-
         }
-<<<<<<< HEAD
-        
-=======
         if (gibPunkteCroupier()<3) 
         {
             return null;
         }
     }
 
-
->>>>>>> 9e26e275accb6a1f507246b0bd7813eced5284b1
     /**
      * Diese Methode gibt den Rundensieger als Objekt zurück
      * @return Person die die Runde gewonnen hat
