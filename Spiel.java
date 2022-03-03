@@ -127,7 +127,6 @@ public class Spiel
                 setzePunkteCroupier(gibPunkteCroupier()+1);
             }
         }
-        spielBeenden();
     }
 
     /**
