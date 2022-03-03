@@ -51,6 +51,7 @@ public abstract class Person
 
     }
 
+
     /**
      * Diese Methode hält den Prozessor für 1 Sekunde lang an, bevor der Prozessor weiter rechnet.
      */
