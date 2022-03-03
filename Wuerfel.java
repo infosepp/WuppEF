@@ -41,7 +41,7 @@ public class Wuerfel
      */
     private void setzeAktWert(int  wert)
     {
-        
+        aktWert = wert;
     }
 
 }//Ende Klasse: Wuerfel
