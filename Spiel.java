@@ -99,9 +99,7 @@ public class Spiel
              return null;
             }
         }
-    
-    
-
+        
     /**
      * Diese Methode gibt den Rundensieger als Objekt zurück
      * @return Person die die Runde gewonnen hat
