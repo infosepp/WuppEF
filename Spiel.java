@@ -105,16 +105,12 @@ public class Spiel
      */
     public Person ermittleRundensieger()
     {
-<<<<<<< HEAD
        if(spieler.gibAktErgebnis() < 21 && croupier.gibAktErgebnis()>21 || spieler.gibAktErgebnis() > croupier.gibAktErgebnis())
        { 
            setzePunkteSpieler(gibPunkteSpieler()+1);
        }else{
            setzePunkteCroupier(gibPunkteCroupier()+1);
        }
-=======
-
->>>>>>> 7e703cf609903f23827ac3e917152d8890a6026b
     }
     
     
@@ -138,10 +134,6 @@ public class Spiel
                 setzePunkteCroupier(gibPunkteCroupier()+1);
             }
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7e703cf609903f23827ac3e917152d8890a6026b
     }
 
     /**
