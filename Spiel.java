@@ -89,6 +89,7 @@ public class Spiel
         {
             return croupier;
         }
+        druckePunktestand();
         return null;
     }
 
@@ -98,12 +99,14 @@ public class Spiel
      */
     public Person ermittleRundensieger()
     {
-       if(spieler.gibAktErgebnis() < 21 && croupier.gibAktErgebnis()>21 || spieler.gibAktErgebnis() > croupier.gibAktErgebnis())
+       System.out.println(spieler.gibAktErgebnis()+":"+croupier.gibAktErgebnis());
+        if(spieler.gibAktErgebnis() < 21 && croupier.gibAktErgebnis()>21 || spieler.gibAktErgebnis() > croupier.gibAktErgebnis())
        { 
            return spieler;
        }else{
            return croupier;
        }
+       
     }
     
     
@@ -117,6 +120,7 @@ public class Spiel
     { 
         while(ermittleGesamtsieger() == null)
         {
+            System.out.println("Nächste Runde");
             starteRunde();
             if(ermittleRundensieger().equals(spieler))
             {
@@ -126,6 +130,7 @@ public class Spiel
             {
                 setzePunkteCroupier(gibPunkteCroupier()+1);
             }
+            druckePunktestand();
         }
     }
 

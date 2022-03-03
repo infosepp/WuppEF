@@ -40,12 +40,16 @@ public class Spieler extends Person
             int ergebnis = wuerfel.gibAktWert();
             setzeAktErgebnis(addiere(ergebnis, gibAktErgebnis()));
         }
+        System.out.println(gibAktErgebnis());
+        
         while(entscheide() == true && gibAktErgebnis() < 21)
         {
             wuerfel.wuerfeln();
             int ergebnis = wuerfel.gibAktWert();
             setzeAktErgebnis(addiere(ergebnis, gibAktErgebnis()));
+            System.out.println(gibAktErgebnis());
         }
+        
     }
 }//Ende Klasse: Spieler
 
