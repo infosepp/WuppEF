@@ -35,7 +35,7 @@ public class Spiel
      */
     public Person gibAktuellerSpieler()
     {
-
+        
     }
 
     /** 
