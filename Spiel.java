@@ -49,7 +49,7 @@ public class Spiel
 
     /**
      * Diese Methode druckt den aktuellen Punktestand auf der Konsole
-     */
+     * @author Mika
     public void druckePunktestand()
     {
 
