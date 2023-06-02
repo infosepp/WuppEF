@@ -16,7 +16,7 @@ public class Wuerfel
      * @return liefert aktWert 
      */
     public int gibAktWert(){
-        return aktWert;
+        
     }
 
     /**  
@@ -24,7 +24,7 @@ public class Wuerfel
      */
     public void wuerfeln()
     {
-      this.aktWert = erzeugeZufallszahl();
+      
     }
 
     /**
@@ -41,7 +41,7 @@ public class Wuerfel
      */
     private void setzeAktWert(int  wert)
     {
-        aktWert = wert;
+      
     }
 
 }//Ende Klasse: Wuerfel
