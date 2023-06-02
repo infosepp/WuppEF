@@ -62,10 +62,11 @@ public class Spiel
     /**
      * Diese Methode wechselt den aktuellen Spieler auf der 
      * Grundlage der Belegung des Attributes aktuellerSpieler
+     * @author Melvin und Finn(halb)
      */
     public void spielerWechseln()
     {
-        
+       
     }
 
     /**
