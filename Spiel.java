@@ -21,6 +21,7 @@ public class Spiel
      * Diese Methode setzt den Attributwert von punkteCroupier 
      * auf den Wert aus pPunkteCroupier
      * @param pPunkteCroupier
+     * @author xenia und lucie
      */
     public void setzePunkteCroupier(int  pPunkteCroupier)
     {
