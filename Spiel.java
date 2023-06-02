@@ -62,7 +62,7 @@ public class Spiel
      */
     public void spielerWechseln()
     {
-        
+       
     }
 
     /**
