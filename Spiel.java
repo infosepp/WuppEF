@@ -50,7 +50,7 @@ public class Spiel
 
     /**
      * Diese Methode druckt den aktuellen Punktestand auf der Konsole
-     */
+     * @author Mika
     public void druckePunktestand()
     {
 
@@ -68,6 +68,7 @@ public class Spiel
     /**
      * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
      * @return Person die gewonnen hat
+     * @author Leander und Levin
      */
     public Person ermittleGesamtsieger()
     {
