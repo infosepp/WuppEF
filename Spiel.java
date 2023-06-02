@@ -28,7 +28,7 @@ public class Spiel
      */
     public void setzePunkteCroupier(int  pPunkteCroupier)
     {
-        
+        punkteCroupier = pPunkteCroupier;
     }
 
     /**
@@ -37,7 +37,7 @@ public class Spiel
      */
     public Person gibAktuellerSpieler()
     {
-        
+        return aktuellerSpieler;
     }
 
     /** 
@@ -46,8 +46,8 @@ public class Spiel
      * @param pAktuellerSpieler
      */
     public void setzeAktuellerSpieler(Person  pAktuellerSpieler)
-    {
-        
+    { 
+        aktuellerSpieler = pAktuellerSpieler;
     }
 
     /**
@@ -55,7 +55,7 @@ public class Spiel
      */
     public void druckePunktestand()
     {
-        
+        System.out.println("Punkte Croupier: "+gibPunkteCroupier()+" - Punkte Spieler:" +gibPunkteSpieler());
     }
 
     /**
@@ -64,16 +64,33 @@ public class Spiel
      */
     public void spielerWechseln()
     {
- 
+        if(gibAktuellerSpieler().equals(croupier))
+        {
+            setzeAktuellerSpieler(spieler); 
+        }
+        else
+        {
+            setzeAktuellerSpieler(croupier);
+        }
+
     }
 
     /**
-     * Diese Methode gibt den Gesamtsieger als Objekt zurück
+     * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
      * @return Person die gewonnen hat
      */
     public Person ermittleGesamtsieger()
     {
-        
+        if (gibPunkteSpieler()== 3)
+        {
+            return spieler;
+        }
+        if (gibPunkteCroupier()== 3)
+        {
+            return croupier;
+        }
+        druckePunktestand();
+        return null;
     }
 
     /**
@@ -82,8 +99,17 @@ public class Spiel
      */
     public Person ermittleRundensieger()
     {
+       System.out.println(spieler.gibAktErgebnis()+":"+croupier.gibAktErgebnis());
+        if(spieler.gibAktErgebnis() < 21 && croupier.gibAktErgebnis()>21 || spieler.gibAktErgebnis() > croupier.gibAktErgebnis())
+       { 
+           return spieler;
+       }else{
+           return croupier;
+       }
        
     }
+    
+    
 
     /**
      * Diese Methode startet ein neues Spiel. In dieser Methode ist die 
@@ -91,8 +117,21 @@ public class Spiel
      */
 
     public void starteSpiel()
-    {
-        
+    { 
+        while(ermittleGesamtsieger() == null)
+        {
+            System.out.println("Nächste Runde");
+            starteRunde();
+            if(ermittleRundensieger().equals(spieler))
+            {
+                setzePunkteSpieler(gibPunkteSpieler()+1);
+            }
+            else
+            {
+                setzePunkteCroupier(gibPunkteCroupier()+1);
+            }
+            druckePunktestand();
+        }
     }
 
     /**
@@ -100,7 +139,9 @@ public class Spiel
      */
     public void starteRunde()
     {
-        
+        spieler.spielen();
+        spielerWechseln();
+        croupier.spielen();
     }
 
     /**
@@ -109,8 +150,18 @@ public class Spiel
      */
 
     public void spielBeenden()
-    {
-        
+    { 
+        System.out.println("Das Spiel wurde beendet, bis zum nächsten Mal!"); 
+        if(ermittleGesamtsieger().equals(spieler))
+        {
+            druckePunktestand();
+            System.out.println("Herzlichen Glückwunsh an den Spieler!");
+        }
+        else
+        {
+            druckePunktestand();
+            System.out.println("Herzlichen Glückwunsh an die Bank!");
+        }
     }
 
     /** 

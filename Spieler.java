@@ -15,7 +15,17 @@ public class Spieler extends Person
      * @return entscheidung
      */
     public boolean entscheide(){
-        
+        Scanner s = new Scanner(System.in);
+        System.out.println("Möchtest du weiterspielen?");
+        String eingabe = s.next();
+        if(eingabe=="Ja")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -24,8 +34,22 @@ public class Spieler extends Person
      */
     public void spielen()
     {
+        for(int i = 0; i < 3; i = i + 1)
+        {
+            wuerfel.wuerfeln();
+            int ergebnis = wuerfel.gibAktWert();
+            setzeAktErgebnis(addiere(ergebnis, gibAktErgebnis()));
+        }
+        System.out.println(gibAktErgebnis());
+        
+        while(entscheide() == true && gibAktErgebnis() < 21)
+        {
+            wuerfel.wuerfeln();
+            int ergebnis = wuerfel.gibAktWert();
+            setzeAktErgebnis(addiere(ergebnis, gibAktErgebnis()));
+            System.out.println(gibAktErgebnis());
+        }
         
     }
-
 }//Ende Klasse: Spieler
 
