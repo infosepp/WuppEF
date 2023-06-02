@@ -66,7 +66,16 @@ public class Spiel
      */
     public void spielerWechseln()
     {
-       
+            if(aktuellerSpieler == spieler){
+                aktuellerSpieler = croupier;
+            } 
+            else
+            {
+                aktuellerSpieler = spieler;
+            }
+                
+        
+            
     }
     /**
      * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
