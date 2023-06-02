@@ -14,9 +14,11 @@ public class Wuerfel
     /** 
      * Diese Methode liefert den aktuellen Wert von aktWert
      * @return liefert aktWert 
+     *@author andrejl25 
      */
-    public int gibAktWert(){
-        
+    public int gibAktWert()
+    {
+        return aktWert;
     }
 
     /**  
@@ -38,10 +40,13 @@ public class Wuerfel
 
     /**
      * Diese Methode setzt den aktWert auf den Parameterwert aus wert
+     * @param wert
+     * @author Jost
      */
     private void setzeAktWert(int  wert)
+
     {
-      
+        aktWert = wert;  
     }
 
 }//Ende Klasse: Wuerfel
