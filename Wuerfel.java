@@ -38,10 +38,13 @@ public class Wuerfel
 
     /**
      * Diese Methode setzt den aktWert auf den Parameterwert aus wert
+     * @param wert
+     * @author Jost
      */
     private void setzeAktWert(int  wert)
+
     {
-      
+        aktWert = wert;  
     }
 
 }//Ende Klasse: Wuerfel
