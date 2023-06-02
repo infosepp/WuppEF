@@ -25,6 +25,7 @@ public class Spiel
      */
     public void setzePunkteCroupier(int  pPunkteCroupier)
     {
+        this.punkteCroupier = pPunkteCroupier;
 
     }
 
