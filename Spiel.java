@@ -40,10 +40,12 @@ public class Spiel
     /** 
      * Diese Methode setzt das Attribut aktuellerSpieler auf den 
      * übergebenen Wert aus pAktuellerSpieler
-     * @param pAktuellerSpieler
+     * @param pAktuellerSpieler 
+     * @author lisa znd leonie
      */
     public void setzeAktuellerSpieler(Person  pAktuellerSpieler)
     { 
+        this.aktuellerSpieler = pAktuellerSpieler;
 
     }
 
