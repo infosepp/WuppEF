@@ -63,7 +63,6 @@ public class Spiel
     {
         
     }
-
     /**
      * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
      * @return Person die gewonnen hat
@@ -71,7 +70,13 @@ public class Spiel
      */
     public Person ermittleGesamtsieger()
     {
-        
+        if(punkteCroupier < punkteSpieler){
+            return spieler;
+        }
+        if(punkteSpieler < punkteCroupier){
+            return croupier;
+        }
+        return null;
     }
 
     /**
@@ -90,7 +95,7 @@ public class Spiel
      * Spiellogik implementiert.
      */
 
-    public void starteSpiel()
+    public  void starteSpiel()
     { 
        
     }
