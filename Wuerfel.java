@@ -14,6 +14,7 @@ public class Wuerfel
     /** 
      * Diese Methode liefert den aktuellen Wert von aktWert
      * @return liefert aktWert 
+     * @author andrej
      */
     public int gibAktWert(){
         
