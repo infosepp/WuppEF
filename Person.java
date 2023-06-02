@@ -36,6 +36,7 @@ public abstract class Person
     /**
      * Diese Methode addiert zwei Zahlen mit einander und gibt das 
      * Ergebnis zurück
+     * @author adelina
      */
     public int addiere(int  zahl1,int  zahl2){
         

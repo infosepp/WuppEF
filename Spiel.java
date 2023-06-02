@@ -25,12 +25,14 @@ public class Spiel
      */
     public void setzePunkteCroupier(int  pPunkteCroupier)
     {
+        this.punkteCroupier = pPunkteCroupier;
 
     }
 
     /**
      * Diese Methode liefert den aktuellen Spieler als Objekt 
      * @return liefert aktuellerSpieler 
+     * @author mia und marike
      */
     public Person gibAktuellerSpieler()
     {
@@ -40,10 +42,12 @@ public class Spiel
     /** 
      * Diese Methode setzt das Attribut aktuellerSpieler auf den 
      * übergebenen Wert aus pAktuellerSpieler
-     * @param pAktuellerSpieler
+     * @param pAktuellerSpieler 
+     * @author lisa znd leonie
      */
     public void setzeAktuellerSpieler(Person  pAktuellerSpieler)
     { 
+        this.aktuellerSpieler = pAktuellerSpieler;
 
     }
 
