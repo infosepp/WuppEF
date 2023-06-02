@@ -67,6 +67,7 @@ public class Spiel
     /**
      * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
      * @return Person die gewonnen hat
+     * @author Leander und Levin
      */
     public Person ermittleGesamtsieger()
     {
