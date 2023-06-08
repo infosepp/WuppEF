@@ -15,7 +15,13 @@ public class Croupier extends Person
      */
     public void spielen()
     {
-        
+        while(this.gibAktErgebnis() < 19)
+        {
+            this.wuerfel.wuerfeln();
+            this.setzeAktErgebnis(addiere(this.gibAktErgebnis(), this.wuerfel.gibAktWert()));
+            System.out.println("Der Croupier hat aktuell eine "+gibAktErgebnis());
+            warte();
+        }
     }
 }//Ende Klasse: Croupier
 

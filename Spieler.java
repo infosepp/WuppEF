@@ -5,8 +5,11 @@ import java.util.Scanner;
 public class Spieler extends Person 
 {
     /*Konstruktor*/
-    public Spieler()
+    private String name;
+
+    public Spieler(String name)
     {
+        this.name = name;
     }
     /* Methoden */
     /**
@@ -15,17 +18,33 @@ public class Spieler extends Person
      * @return entscheidung
      */
     public boolean entscheide(){
-        Scanner s = new Scanner(System.in);
-        System.out.println("Möchtest du weiterspielen?");
-        String eingabe = s.next();
-        if(eingabe=="Ja")
+        if(gibAktErgebnis() < 21)
         {
-            return true;
+            Scanner s = new Scanner(System.in);
+            System.out.println("Möchtest du weiterspielen? // j = Ja und n = Nein");
+            String eingabe = s.next();
+            if(eingabe=="j")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        else
+        else 
         {
             return false;
         }
+    }
+    
+    /**
+     * Diese Methode gibt den Namen des Spielers zurück
+     * @return name
+     */
+    public String gibName()
+    {
+        return this.name;
     }
 
     /**
@@ -34,8 +53,7 @@ public class Spieler extends Person
      */
     public void spielen()
     {
-        
-        
+
     }
 }//Ende Klasse: Spieler
 

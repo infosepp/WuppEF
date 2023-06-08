@@ -1,3 +1,4 @@
+import java.util.Scanner;
 /**
  * Die Klasse Spiel beschreibt die übergeordnete Logik des Wupp-Spiels.
  */
@@ -13,7 +14,14 @@ public class Spiel
     /*Konstruktor*/
     public Spiel()
     {
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nennen Sie ihren Namen!");
+        String name = sc.next();
+        croupier = new Croupier();
+        spieler = new Spieler(name);
+        punkteCroupier = 0;
+        punkteSpieler = 0;
+        aktuellerSpieler = spieler;
     }
 
     /* Methoden */
@@ -36,7 +44,7 @@ public class Spiel
      */
     public Person gibAktuellerSpieler()
     {
-        
+        return this.aktuellerSpieler;
     }
 
     /** 
@@ -54,9 +62,15 @@ public class Spiel
     /**
      * Diese Methode druckt den aktuellen Punktestand auf der Konsole
      * @author Mika
+     * 
+     */
     public void druckePunktestand()
     {
-
+        System.out.println("-----------------Punktestand nach Spielen-----------------");
+        System.out.println("Spieler \t "+punkteSpieler+" : "+punkteCroupier+" \t\t Croupier");
+        System.out.println("-----------------Punktestand nach Wertung-----------------");        
+        System.out.println("Spieler \t "+punkteSpieler+" : "+punkteCroupier+" \t\t Croupier");
+        System.out.println("---------------------------------------------");
     }
 
     /**
@@ -66,17 +80,16 @@ public class Spiel
      */
     public void spielerWechseln()
     {
-            if(aktuellerSpieler == spieler){
-                aktuellerSpieler = croupier;
-            } 
-            else
-            {
-                aktuellerSpieler = spieler;
-            }
-                
-        
-            
+        if(aktuellerSpieler == spieler)
+        {
+            aktuellerSpieler = croupier;
+        } 
+        else
+        {
+            aktuellerSpieler = spieler;
+        }
     }
+
     /**
      * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
      * @return Person die gewonnen hat
@@ -84,10 +97,12 @@ public class Spiel
      */
     public Person ermittleGesamtsieger()
     {
-        if(punkteCroupier < punkteSpieler){
+        if(punkteCroupier < punkteSpieler && punkteSpieler >= 3)
+        {
             return spieler;
         }
-        if(punkteSpieler < punkteCroupier){
+        if(punkteSpieler < punkteCroupier && punkteCroupier >= 3)
+        {
             return croupier;
         }
         return null;
@@ -99,10 +114,16 @@ public class Spiel
      */
     public Person ermittleRundensieger()
     {
-       
+        if(spieler.gibAktErgebnis() <= 21)
+        {
+            if(spieler.gibAktErgebnis() > croupier.gibAktErgebnis())
+            {
+                return spieler;
+            }
+        }
+        return croupier;
     }
-    
-    
+
 
     /**
      * Diese Methode startet ein neues Spiel. In dieser Methode ist die 
@@ -111,7 +132,14 @@ public class Spiel
 
     public  void starteSpiel()
     { 
-       
+        System.out.println("\f");
+        setzeAktuellerSpieler(spieler);
+        while(ermittleGesamtsieger() == null)
+        {
+            starteRunde();
+            druckePunktestand();
+        }
+        spielBeenden();
     }
 
     /**
@@ -119,17 +147,31 @@ public class Spiel
      */
     public void starteRunde()
     {
-       
+        System.out.println("\f");
+        gibAktuellerSpieler().spielen();
+        spielerWechseln();
+        gibAktuellerSpieler().spielen();
+        
+        if(ermittleRundensieger() == spieler)
+        {
+            System.out.println("Herzlichen Glückwunsch "+spieler.gibName()+"! Sie haben die Runde gewonnen!" );
+            setzePunkteSpieler(punkteSpieler+1);
+        }
+        else
+        {
+            System.out.println("Herzlichen Glückwunsch Croupier! Die Bank hat die Runde gewonnen!" );
+            setzePunkteCroupier(punkteCroupier+1);
+        }
     }
 
     /**
      * Diese Methode beendet das Spiel und gibt auf der
      * Konsole ein Grußwort aus!
      */
-
     public void spielBeenden()
     { 
-       
+        System.out.println("\f");
+        druckePunktestand();
     }
 
     /** 
