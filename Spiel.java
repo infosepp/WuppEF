@@ -25,31 +25,35 @@ public class Spiel
      */
     public void setzePunkteCroupier(int  pPunkteCroupier)
     {
+        this.punkteCroupier = pPunkteCroupier;
 
     }
 
     /**
      * Diese Methode liefert den aktuellen Spieler als Objekt 
      * @return liefert aktuellerSpieler 
+     * @author mia und marike
      */
     public Person gibAktuellerSpieler()
     {
-
+        
     }
 
     /** 
      * Diese Methode setzt das Attribut aktuellerSpieler auf den 
      * übergebenen Wert aus pAktuellerSpieler
-     * @param pAktuellerSpieler
+     * @param pAktuellerSpieler 
+     * @author lisa znd leonie
      */
     public void setzeAktuellerSpieler(Person  pAktuellerSpieler)
     { 
+        this.aktuellerSpieler = pAktuellerSpieler;
 
     }
 
     /**
      * Diese Methode druckt den aktuellen Punktestand auf der Konsole
-     */
+     * @author Mika
     public void druckePunktestand()
     {
 
@@ -58,19 +62,35 @@ public class Spiel
     /**
      * Diese Methode wechselt den aktuellen Spieler auf der 
      * Grundlage der Belegung des Attributes aktuellerSpieler
+     * @author Melvin und Finn(halb)
      */
     public void spielerWechseln()
     {
+            if(aktuellerSpieler == spieler){
+                aktuellerSpieler = croupier;
+            } 
+            else
+            {
+                aktuellerSpieler = spieler;
+            }
+                
         
+            
     }
-
     /**
      * Diese Methode gibt den Gesamtsieger als Objekt zurück                 
      * @return Person die gewonnen hat
+     * @author Leander und Levin
      */
     public Person ermittleGesamtsieger()
     {
-        
+        if(punkteCroupier < punkteSpieler){
+            return spieler;
+        }
+        if(punkteSpieler < punkteCroupier){
+            return croupier;
+        }
+        return null;
     }
 
     /**
@@ -89,7 +109,7 @@ public class Spiel
      * Spiellogik implementiert.
      */
 
-    public void starteSpiel()
+    public  void starteSpiel()
     { 
        
     }
