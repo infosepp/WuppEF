@@ -23,10 +23,11 @@ public class Wuerfel
 
     /**  
      * Diese Methode wuerfelt eine neue Zahl zwischen 1 und 6 und weißt sie dem aktWert zu.
+     * @author Melvin
      */
     public void wuerfeln()
     {
-      
+      aktWert = erzeugeZufallszahl();
     }
 
     /**
