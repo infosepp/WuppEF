@@ -21,10 +21,10 @@ public abstract class Person
     /** 
      * Diese Methode setzt den Attributwert von aktErgebnis 
      *  auf den Wert aus pAktErgebnis (Max)
+     *  @author Melvin
      */
     public void setzeAktErgebnis(int  pAktErgebnis){
-        
-        
+        aktErgebnis = pAktErgebnis;
         
     }
 
@@ -45,8 +45,10 @@ public abstract class Person
     /**
      * Diese Methode gib den aktuellen Attributwert von aktErgebnis aus 
      * @return liefert aktErgebnis 
+     *@author Melvin
      */
     public int gibAktErgebnis(){
+        return aktErgebnis;
         
     }
 
